@@ -5,7 +5,7 @@
 
 // Structure to hold job information
 typedef struct {
-    char id;       // A, B, C, ...
+    char id;
     int priority;
 } Job;
 
@@ -98,7 +98,6 @@ void insert_job(char id, int priority) {
 }
 
 // Remove specific job by value (priority 100 in this case)
-// Returns 1 if found and removed, 0 otherwise
 int remove_job_by_priority(int target_priority) {
     int idx = -1;
 
@@ -134,7 +133,7 @@ int main() {
 
     printf("*** Initial jobs ***\n");
 
-    // 1. Fill heap array (1-based) with jobs A,B,C,...
+    // 1. Fill heap array (1-based) with jobs
     heap_size = n;
     char id = 'A';
     for (int i = 0; i < n; i++) {
